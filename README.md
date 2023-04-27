@@ -1,7 +1,7 @@
 1. create index.html - done
 2. add 'build' scripts - done
    - copy index.html to dist
-3. add 'preview' scripts
+3. add 'preview' scripts - done
    - serving dist/index.html http server
 4. add posts (in ./posts/post1.html)
 5. create link to ./posts/post1.html in index.html

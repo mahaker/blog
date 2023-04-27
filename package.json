@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js",
+    "serve": "node scripts/serve.js"
   },
   "keywords": [],
   "author": "",
