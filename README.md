@@ -7,7 +7,7 @@
 5. create link to ./posts/post1.html in index.html -done
 6. 'build' scripts resolve ./posts/post1.html - done
    - copy ./posts/post1.html to dist
-7. add 'loadPosts' function (it's build time API)
+7. add 'loadPosts' function (it's build time API) -done
 8. ./posts/post1.html to post1.md
 9. 'build' scripts resolve ./posts/post1.md
    - md to html

@@ -6,6 +6,19 @@
 <body>
   <h1>It's my blog</h1>
 
-  <a href="/posts/post1.html">post1</a>
-</body>
+  <ul id="posts"></ul>
 
+  <script>
+    // it is replaced to { title: string, location: string }[] in build phase
+    const posts = __POSTS__
+    const postsRoot = document.getElementById('posts')
+    posts.forEach(post => {
+      const li = document.createElement('li')
+      const anchor = document.createElement('a')
+      anchor.href = post.location
+      anchor.innerHTML = post.title 
+      li.appendChild(anchor)
+      postsRoot.appendChild(li)
+    })
+  </script>
+</body>
