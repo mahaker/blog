@@ -15,4 +15,5 @@
    - must header tag attachment!
 10. layout and styling
 11. use Map<filename, content> instead of fs.readFileSync
+12. index.html to template(vue, astro and others)
 
