@@ -1,3 +1,7 @@
+---
+title: Second post
+---
+
 # Second post
 
 hogehoge

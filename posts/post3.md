@@ -1,3 +1,7 @@
+---
+title: Third post
+---
+
 # Third post
 
 hogehoge

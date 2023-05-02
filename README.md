@@ -16,3 +16,6 @@
 10. layout and styling
 11. use Map<filename, content> instead of fs.readFileSync
 12. index.html to template(vue, astro and others)
+13. frontmatter support - done
+14. add frontmatter attributes 'date', and posts sort using it
+15. code highlight

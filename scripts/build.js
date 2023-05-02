@@ -1,6 +1,7 @@
 const fs = require('node:fs')
 const path = require('node:path')
 const stream = require('node:stream')
+const fm = require('front-matter')
 const { marked } = require('marked')
 
 const dist = path.resolve(__dirname, '../dist/')
@@ -35,19 +36,23 @@ function getPosts() {
 
   return stats
     .filter(s => s.isFile() && postsMatch.test(s.name))
-    .map(s => ({ title: s.name, location: `/posts/${s.name.replace(postsMatch, '.html')}` }))
+    .map(s => {
+      const meta = fm(fs.readFileSync(path.resolve(__dirname, '../posts', s.name), 'utf8')).attributes
+      return { title: meta.title, location: `/posts/${s.name.replace(postsMatch, '.html')}` }
+    })
 }
 
 function renderPosts() {
   const stats = fs.readdirSync(path.resolve(__dirname, '../posts'), { withFileTypes: true })
-  const layout = fs.readFileSync(path.resolve(__dirname, '../layout/base.html')).toString()
+  const layout = fs.readFileSync(path.resolve(__dirname, '../layout/base.html'), 'utf8')
   const contentMatch = new RegExp('<!-- __CONTENT__ -->', 'g')
 
   stats.forEach(s => {
     if (s.isDirectory()) return
     if (!postsMatch.test(s.name)) return
 
-    const parsed = marked.parse(fs.readFileSync(path.resolve(__dirname, '../posts', s.name)).toString())
+    const frontmatter = fm(fs.readFileSync(path.resolve(__dirname, '../posts', s.name), 'utf8'))
+    const parsed = marked.parse(frontmatter.body, { silent: true })
     const html = s.name.replace(postsMatch, '.html')
     const rendered = layout.replace(contentMatch, parsed)
     fs.writeFileSync(path.resolve(dist, 'posts/', html), rendered)
