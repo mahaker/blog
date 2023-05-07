@@ -1,55 +1,62 @@
 <!DOCTYPE html>
-<head>
-  <title>My Blog</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <style>
-    html {
-      font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
-    }
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>mahakerのブログ</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+      html {
+        font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+      }
 
-    body {
-      background-color: rgb(15 23 42 / 1);
-    }
+      body {
+        background-color: rgb(15 23 42 / 1);
+      }
 
-    .wrapper {
-      max-width: 60rem;
-      margin: 0 auto;
-    }
-
-    .contents, .footer {
-      color: white;
-    }
-
-    .contents h1 { font-size: 3.5rem; }
-    .contents h2 { font-size: 3rem; }
-    .contents h3 { font-size: 2.5rem; }
-
-    a {
-      color: inherit;
-      font-size: 1rem;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    @media screen and (max-width: 1024px) {
       .wrapper {
-        max-width: 50rem;
+        max-width: 60rem;
+        margin: 0 auto;
+      }
+
+      .contents, .footer {
+        color: white;
+      }
+
+      .contents {
+        font-size: 1.5rem;
       }
 
       a {
-        font-size: 2rem;
+        color: inherit;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="contents">
-      <!-- __CONTENT__ -->
+
+      @media screen and (max-width: 1024px) {
+        .wrapper {
+          max-width: 50rem;
+        }
+
+        .contents {
+          font-size: 3rem;
+        }
+
+        a {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="contents">
+        <!-- __CONTENT__ -->
+      </div>
+      <div class="footer">
+        <hr style="border-top: 1px white solid">
+        <a href="/" aria-label="my blog">Back to Top</a>
+      </div>
     </div>
-    <div class="footer">
-      <hr style="border-top: 1px white solid">
-      <a href="/" aria-label="my blog">Back to Top</a>
-    </div>
-  </div>
-</body>
+  </body>
+</html>
