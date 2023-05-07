@@ -1,21 +1,21 @@
-1. create index.html - done
-2. add 'build' scripts - done
+- [x] create index.html
+- [x] add 'build' scripts
    - copy index.html to dist
-3. add 'preview' scripts - done
+- [x] add 'preview' scripts
    - serving dist/index.html http server
-4. add posts (in ./posts/post1.html) - done
-5. create link to ./posts/post1.html in index.html - done
-6. 'build' scripts resolve ./posts/post1.html - done
+- [x] add posts (in ./posts/post1.html)
+- [x] create link to ./posts/post1.html in index.html
+- [x] 'build' scripts resolve ./posts/post1.html
    - copy ./posts/post1.html to dist
-7. add 'loadPosts' function (it's build time API) - done
-8. ./posts/post1.html to post1.md - done
-9. 'build' scripts resolve ./posts/post1.md - done
+- [x] add 'loadPosts' function (it's build time API)
+- [x] ./posts/post1.html to post1.md
+- [x] 'build' scripts resolve ./posts/post1.md
    - md to html
    - copy the html to dist
    - must header tag attachment!
-10. layout and styling
-11. use Map<filename, content> instead of fs.readFileSync
-12. index.html to template(vue, astro and others)
-13. frontmatter support - done
-14. add frontmatter attributes 'date', and posts sort using it
-15. code highlight
+- [] layout and styling
+- [] preview server use Map<filename, content> instead of fs.readFileSync
+- [] index.html to template(vue, astro and others)
+- [x] frontmatter support
+- [] add frontmatter attributes 'publishedAt', and posts sort using it
+- [] code highlight
