@@ -1,3 +1,15 @@
+# Blog
+
+## Development
+
+```bash
+$pnpm install
+$pnpm build    # build posts/*.md
+$pnpm serve    # run preview server
+```
+
+### TODO
+
 - [x] create index.html
 - [x] add 'build' scripts
    - copy index.html to dist
@@ -13,9 +25,11 @@
    - md to html
    - copy the html to dist
    - must header tag attachment!
-- [] layout and styling
-- [] preview server use Map<filename, content> instead of fs.readFileSync
-- [] index.html to template(vue, astro and others)
+- [ ] layout and styling
+- [ ] preview server use Map<filename, content> instead of fs.readFileSync (cache)
+- [ ] index.html to template(vue, astro and others)
 - [x] frontmatter support
 - [x] add frontmatter attributes 'publishedAt', and posts sort using it
-- [] code highlight
+- [ ] code highlight
+- [ ] watch mode
+- [ ] deploy
