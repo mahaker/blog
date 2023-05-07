@@ -21,7 +21,7 @@ server.on('request', (request, res) => {
     res.end(entry)
   } catch(e) {
     console.error(e)
-    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.statusCode = 500
     res.end('error occured')
   }
 })
