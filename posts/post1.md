@@ -1,7 +1,8 @@
 ---
 title: First post
+publishedAt: "2022-04-01"
 ---
 
-# First post
+# 最初の記事
 
-hogehoge
+こんにちは、mahakerです。

@@ -1,75 +1,78 @@
 <!DOCTYPE html>
-<head>
-  <title>My Blog</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <style>
-    html {
-      font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
-    }
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>mahakerのブログ</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+      html {
+        font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+      }
 
-    body {
-      background-color: rgb(15 23 42 / 1);
-    }
+      body {
+        background-color: rgb(15 23 42 / 1);
+      }
 
-    #title {
-      color: white;
-      font-size: 3.5rem;
-      font-weight: bold;
-    }
-
-    .wrapper {
-      max-width: 60rem;
-      margin: 0 auto;
-    }
-
-    .posts {
-      margin-top: 30px;
-      color: white;
-    }
-
-    a {
-      color: inherit;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    @media screen and (max-width: 1024px) {
       #title {
-        font-size: 5rem;
+        color: white;
+        font-size: 3.5rem;
+        font-weight: bold;
       }
 
       .wrapper {
-        max-width: 50rem;
+        max-width: 60rem;
+        margin: 0 auto;
+      }
+
+      .posts {
+        margin-top: 30px;
+        color: white;
       }
 
       a {
-        font-size: 3rem;
+        color: inherit;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <a href="/" aria-label="my blog">
-      <h1 id="title">It's my blog</h1>
-    </a>
-  </div>
 
-  <div id="posts" class="wrapper"></div>
+      @media screen and (max-width: 1024px) {
+        #title {
+          font-size: 5rem;
+        }
 
-  <script>
-    // it is replaced to { title: string, location: string }[] in build phase
-    const posts = __POSTS__
-    const postsRoot = document.getElementById('posts')
-    posts.forEach(post => {
-      const wrapper = document.createElement('div')
-      wrapper.classList = ['posts']
-      const anchor = document.createElement('a')
-      anchor.href = post.location
-      anchor.innerHTML = post.title 
-      wrapper.appendChild(anchor)
-      postsRoot.appendChild(wrapper)
-    })
-  </script>
-</body>
+        .wrapper {
+          max-width: 50rem;
+        }
+
+        a {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="/" aria-label="my blog">
+        <h1 id="title">mahakerのブログ</h1>
+      </a>
+    </div>
+
+    <div id="posts" class="wrapper"></div>
+
+    <script>
+      // it is replaced to { title: string, location: string }[] in build phase
+      const posts = __POSTS__
+      const postsRoot = document.getElementById('posts')
+      posts.forEach(post => {
+        const wrapper = document.createElement('div')
+        wrapper.classList = ['posts']
+        const anchor = document.createElement('a')
+        anchor.href = post.location
+        anchor.innerHTML = `<span class="published-at">${post.publishedAt}</span> <span>${post.title}</span>` 
+        wrapper.appendChild(anchor)
+        postsRoot.appendChild(wrapper)
+      })
+    </script>
+  </body>
+</html>

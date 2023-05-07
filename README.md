@@ -17,5 +17,5 @@
 - [] preview server use Map<filename, content> instead of fs.readFileSync
 - [] index.html to template(vue, astro and others)
 - [x] frontmatter support
-- [] add frontmatter attributes 'publishedAt', and posts sort using it
+- [x] add frontmatter attributes 'publishedAt', and posts sort using it
 - [] code highlight
