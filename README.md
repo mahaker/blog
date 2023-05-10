@@ -32,4 +32,19 @@ $pnpm serve    # run preview server
 - [x] add frontmatter attributes 'publishedAt', and posts sort using it
 - [ ] code highlight
 - [ ] watch mode
-- [ ] deploy
+- [x] deploy
+- [ ] custom build settings(using lambda)
+- [ ] custom domain
+
+### Deploy
+
+This blog using AWS Amplify Hosting.
+The following operations were used to build it.
+```shellscript
+$pnpm add -D @aws-amplify/cli
+$pnpm exec amplify configure
+$pnpm exec amplify init
+$pnpm exec amplify add hosting
+$pnpm exec amplify publish
+```
+
